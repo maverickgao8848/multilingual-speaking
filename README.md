@@ -4,6 +4,8 @@
 
 这是独立于 [`kouyu`](https://github.com/maverickgao8848/kouyu) 的多语言版本。英语练习请使用 `kouyu`，本仓库专注西、法、德、日、韩五种语言。
 
+![多语种口语练习台](docs/screenshots/practice.png)
+
 ## 能做什么
 
 - 支持西班牙语、法语、德语、日语、韩语五种语言，当前审定范围为 CEFR A1
@@ -85,6 +87,8 @@ python "$env:USERPROFILE/.codex/skills/multilingual-speaking/scripts/workbench.p
 
 终端会显示本地访问地址。保持终端运行，按 `Ctrl+C` 停止。复习台可以按语言和场景查看记录，并根据尚未掌握或需要复测的目标生成推荐。
 
+![多语种复习台](docs/screenshots/review.png)
+
 归档一次训练：
 
 ```bash
@@ -99,21 +103,12 @@ Session 格式和证据规则见 [复习台数据规范](references/workbench-da
 .
 ├── SKILL.md                    # Skill 入口、路由与互动规则
 ├── agents/openai.yaml          # 显示名称、简介与默认提示词
-├── curriculum/                 # 内置课程、主题目录、来源与完整性清单
+├── curriculum/                 # 运行时必需的内置课程、主题与来源数据
 ├── references/                 # 语言、备课、会话和复习数据规范
 ├── scripts/materials.py        # 主题菜单与预习卡查询
-├── scripts/sync_curriculum.py  # 课程同步和严格校验
 ├── scripts/workbench.py        # 本地归档、推荐与网页服务
 ├── assets/workbench/           # 复习台前端
-├── evals/                      # 代表性行为测试提示
-└── tests/                      # 课程与复习台单元测试
-```
-
-## 测试
-
-```bash
-python -m unittest discover -s tests -v
-python scripts/sync_curriculum.py --check
+└── docs/screenshots/           # README 中展示的真实工作台截图
 ```
 
 ## 课程边界与隐私

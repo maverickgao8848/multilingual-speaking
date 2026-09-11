@@ -96,6 +96,23 @@ def target_counts(duration: int) -> tuple[int, int, int, int]:
     return 8, 8, 6, 7
 
 
+def preview_counts(duration: int) -> tuple[int, int, int]:
+    """Return learner-facing preparation-card minimums.
+
+    The audited pack remains a compact active-practice core. The skill fills the
+    difference with clearly non-audited, session-original recognition material.
+    """
+    if not 1 <= duration <= 60:
+        raise ValueError("duration must be between 1 and 60 minutes")
+    if duration <= 5:
+        return 15, 3, 2
+    if duration <= 10:
+        return 20, 5, 3
+    if duration <= 20:
+        return 30, 8, 5
+    return 40, 12, 8
+
+
 def expanded_targets(pack: dict, language: str, scene: str, field: str) -> list[dict]:
     """Append source-aware long-session targets while preserving the compact base pack."""
     base = list(pack.get(field, []))
@@ -135,6 +152,7 @@ def build_card(language: str, scene: str, level: str, duration: int) -> dict:
     mappings = scene_entry.get("mappings", {}).get(language, [])
     source_index = {source["id"]: source for source in source_data}
     keyword_count, phrase_count, pattern_count, challenge_count = target_counts(duration)
+    preview_keyword_count, preview_phrase_count, preview_pattern_count = preview_counts(duration)
     refs = []
     for ref in pack.get("source_refs", []):
         source = source_index[ref["source_id"]]
@@ -160,6 +178,18 @@ def build_card(language: str, scene: str, level: str, duration: int) -> dict:
         "keywords": expanded_targets(pack, language, scene, "keywords")[:keyword_count],
         "phrases": expanded_targets(pack, language, scene, "phrases")[:phrase_count],
         "sentence_patterns": pack.get("sentence_patterns", [])[:pattern_count],
+        "preview_plan": {
+            "keyword_count": preview_keyword_count,
+            "phrase_count": preview_phrase_count,
+            "sentence_pattern_count": preview_pattern_count,
+            "audited_core_counts": {
+                "keywords": keyword_count,
+                "phrases": phrase_count,
+                "sentence_patterns": pattern_count,
+            },
+            "supplement_required": True,
+            "supplement_policy": "Fill any gap with A1-appropriate session-original recognition material; do not assign it audited IDs or provenance.",
+        },
         "politeness_note_zh": pack.get("politeness_note_zh", ""),
         "register_pairs": pack.get("register_pairs", []),
         "pronunciation_focus": pack.get("pronunciation_focus", []),
@@ -193,6 +223,8 @@ def render_markdown(card: dict, show_romanization: bool) -> str:
         f"- 级别：{card['level']}",
         f"- 时长：{card['duration_minutes']} 分钟",
         f"- 语言标准：{card['language_policy']['standard']}",
+        f"- 最终预习卡数量：{card['preview_plan']['keyword_count']} 个关键词、{card['preview_plan']['phrase_count']} 个词组、{card['preview_plan']['sentence_pattern_count']} 个完整句型",
+        "- 以下是已审定核心；Skill 会用无虚假来源标注的当次原创内容补足最终预习卡。",
         "",
         "## 关键词",
         "",

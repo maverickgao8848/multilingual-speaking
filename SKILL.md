@@ -22,7 +22,7 @@ Turn an audited course pack into a short speaking loop: choose, preview, role-pl
 - Audited level: A1.
 - Audited, ready scenes: café ordering, directions/public transport, a doctor visit, introductions, shopping, and making plans.
 - On-demand catalog: 20 additional practical topics for each supported language. These are session-original exercises, not pre-sourced curriculum.
-- Durations: 5, 10, 20, or 40 minutes. The duration changes how much of the pack is previewed and rehearsed, not the claimed CEFR level. The 20-minute card uses 4 keywords and 4 phrases; the 40-minute card uses 8 of each.
+- Durations: 5, 10, 20, or 40 minutes. The duration changes how much is previewed and rehearsed, not the claimed CEFR level. Learner-facing vocabulary banks contain 15, 20, 30, or 40 words respectively; phrases and complete sentence patterns grow more moderately.
 
 If the learner asks for an unsupported language or higher level, say that the audited A1 curriculum does not cover it. For a catalog topic marked `on_demand`, offer an explicitly labeled original, non-curriculum exercise. Never present an original extension as textbook-derived.
 
@@ -70,9 +70,9 @@ For an `audited_ready` topic, load the matching card data:
 python <skill-directory>/scripts/materials.py card --language <code> --scene <scene-id> --duration <minutes>
 ```
 
-Present a compact preparation card containing the situation, roles, mission, key words, phrases, complete sentence patterns, register or politeness note, story stages, and a measurable challenge. For Japanese and Korean, follow the display rules in the language policy. Do not show a complete dialogue.
+Treat the returned items as the audited core, then complete the learner-facing card according to `preview_plan`. Reach the full vocabulary count with common, A1-appropriate, session-original scene vocabulary when the audited core is smaller. The added vocabulary is a recognition bank, not a set of audited targets: do not invent material IDs or source references for it, and do not archive it as audited curriculum. Cover practical choice dimensions rather than padding with near-duplicates. Present the situation, roles, mission, the full key-word bank, phrases, complete sentence patterns, register or politeness note, story stages, and a measurable challenge. For Japanese and Korean, follow the display rules in the language policy. Do not show a complete dialogue.
 
-For an `on_demand` topic, use the same compact card shape but put `资料状态：当次原创准备（非预置来源课程）` near the top. Do not invent provenance, material IDs, or claims of prior auditing, and do not archive invented targets as audited curriculum items.
+For an `on_demand` topic, use the same duration-scaled card shape but put `资料状态：当次原创准备（非预置来源课程）` near the top. Supply the full vocabulary, phrase, and sentence-pattern counts from the lesson-design table. Do not invent provenance, material IDs, or claims of prior auditing, and do not archive invented targets as audited curriculum items.
 
 End the card with two controls in the target language plus Chinese explanation: a natural readiness signal to begin and a clear signal to stop and review. Treat equivalent wording as the same intent.
 

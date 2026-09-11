@@ -138,6 +138,19 @@ def validate_session(session: dict, index: dict[str, dict] | None = None) -> Non
             raise ValueError("observed pronunciation requires non-empty notes")
     elif evidence_mode != "none":
         raise ValueError("not_observed pronunciation must use evidence_mode none")
+    repairs = session.get("repairs", [])
+    require(repairs, list, "repairs")
+    for position, repair in enumerate(repairs):
+        require(repair, dict, f"repairs[{position}]")
+        require(repair.get("learner"), str, f"repairs[{position}].learner")
+        require(repair.get("natural"), str, f"repairs[{position}].natural")
+        require(repair.get("reason_zh"), str, f"repairs[{position}].reason_zh")
+    focus_next = session.get("focus_next", [])
+    require(focus_next, list, "focus_next")
+    if not all(isinstance(item, str) and item.strip() for item in focus_next):
+        raise ValueError("focus_next must contain non-empty strings")
+    if "next_drill" in session:
+        require(session["next_drill"], str, "next_drill")
 
 
 def canonical_session(session: dict) -> dict:
@@ -181,6 +194,30 @@ def load_state(data_dir: Path) -> dict:
     return state
 
 
+def latest_targets(items: list[dict]) -> list[dict]:
+    latest: dict[str, dict] = {}
+    for session in items:
+        for target in session.get("targets", []):
+            material_id = target.get("material_id", "")
+            if material_id and material_id not in latest:
+                latest[material_id] = target
+    return list(latest.values())
+
+
+def recent_repairs(items: list[dict], limit: int = 3) -> list[dict]:
+    seen: set[tuple[str, str]] = set()
+    result: list[dict] = []
+    for session in items:
+        for repair in session.get("repairs", []):
+            key = (repair.get("learner", ""), repair.get("natural", ""))
+            if key not in seen:
+                seen.add(key)
+                result.append(repair)
+                if len(result) == limit:
+                    return result
+    return result
+
+
 def render_dashboard(state: dict) -> str:
     sessions = sorted(state["sessions"], key=lambda item: item.get("created_at", ""), reverse=True)
     lines = ["# 多语种口语复习台", "", f"> 已归档 {len(sessions)} 次练习。", ""]
@@ -191,11 +228,11 @@ def render_dashboard(state: dict) -> str:
         grouped[(session["language"], session["scene"])].append(session)
     scenes = scene_metadata()
     for (language, scene), items in grouped.items():
-        targets = [target for item in items for target in item.get("targets", [])]
+        targets = latest_targets(items)
         mastered = sum(target.get("status") == "mastered" for target in targets)
-        review = list(dict.fromkeys(
-            target.get("surface", "") for target in targets if target.get("status") == "needs_review"
-        ))[:6]
+        review = list(dict.fromkeys(target.get("surface", "") for target in targets if target.get("status") in {"developing", "needs_review"}))[:6]
+        latest = items[0]
+        repairs = recent_repairs(items)
         lines += [f"## {LANGUAGE_EMOJI[language]} {LANGUAGE_LABELS[language]} · {SCENE_EMOJI.get(scene, '·')} {scenes[scene].get('label_zh', scene)}", ""]
         lines += [
             f"- 练习次数：{len(items)}",
@@ -204,6 +241,15 @@ def render_dashboard(state: dict) -> str:
         ]
         if review:
             lines.append(f"- 下次复习：{'、'.join(filter(None, review))}")
+        focus_next = [item for item in latest.get("focus_next", []) if item][:3]
+        if focus_next:
+            lines.append(f"- 下次重点：{'、'.join(focus_next)}")
+        if latest.get("next_drill"):
+            lines.append(f"- 迁移练习：{latest['next_drill']}")
+        if repairs:
+            lines += ["", "### 重点纠正", ""]
+            for repair in repairs:
+                lines.append(f"- `{repair['learner']}` → `{repair['natural']}`：{repair['reason_zh']}")
         lines.append("")
     lines += ["---", "", f"更新时间：{datetime.now().astimezone().isoformat(timespec='seconds')}", ""]
     return "\n".join(lines)
@@ -312,12 +358,13 @@ def recommendation_payload(state: dict, language: str | None = None, limit: int 
     queue.sort(key=lambda item: (-item["priority"], item["last_seen"], item["material_id"]))
 
     if requested_language is None:
-        language = queue[0]["language"] if queue else state["preferences"]["language"]
+        language = queue[0]["language"] if queue else (sessions[-1]["language"] if sessions else state["preferences"]["language"])
     else:
         language = requested_language
     language_due = [item for item in queue if item["language"] == language]
     scenes = list(scene_metadata())
     preferences = state["preferences"]
+    recent_session = next((item for item in reversed(sessions) if item["language"] == language), None)
     if language_due:
         chosen_scene = language_due[0]["scene"]
         chosen_targets = [item for item in language_due if item["scene"] == chosen_scene][:4]
@@ -352,9 +399,9 @@ def recommendation_payload(state: dict, language: str | None = None, limit: int 
             "scene": chosen_scene,
             "scene_label": scene.get("label_zh", chosen_scene),
             "pack_id": f"{language}.{chosen_scene}.a1",
-            "duration": preferences["duration"],
-            "support_mode": preferences["support_mode"],
-            "interaction_mode": preferences.get("interaction_mode", "text"),
+            "duration": recent_session.get("duration_minutes", preferences["duration"]) if recent_session else preferences["duration"],
+            "support_mode": recent_session.get("support_mode", preferences["support_mode"]) if recent_session else preferences["support_mode"],
+            "interaction_mode": recent_session.get("interaction_mode", preferences.get("interaction_mode", "text")) if recent_session else preferences.get("interaction_mode", "text"),
             "review_target_ids": [item["material_id"] for item in chosen_targets],
             "reason": reason,
         },
@@ -454,11 +501,11 @@ def build_parser() -> argparse.ArgumentParser:
     commands = parser.add_subparsers(dest="command", required=True)
     for command in ("init", "archive"):
         sub = commands.add_parser(command)
-        sub.add_argument("--data-dir", type=Path, default=Path.cwd() / "multilingual-speaking-workbench")
+        sub.add_argument("--data-dir", type=Path, default=Path.home() / "multilingual-speaking-workbench")
         if command == "archive":
             sub.add_argument("--input", type=Path, required=True)
     sub = commands.add_parser("serve")
-    sub.add_argument("--data-dir", type=Path, default=Path.cwd() / "multilingual-speaking-workbench")
+    sub.add_argument("--data-dir", type=Path, default=Path.home() / "multilingual-speaking-workbench")
     sub.add_argument("--host", default="127.0.0.1")
     sub.add_argument("--port", type=int, default=8766)
     sub.add_argument("--no-open", action="store_true")

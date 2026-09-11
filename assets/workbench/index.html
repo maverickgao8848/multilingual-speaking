@@ -4,87 +4,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8efda">
-  <title>五语口语练习台</title>
+  <title>五语口语复习台</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="paper-noise" aria-hidden="true"></div>
   <div class="shell">
     <aside class="sidebar">
-      <a class="brand" href="#practice" aria-label="五语口语练习台首页">
+      <a class="brand" href="#review" aria-label="五语口语复习台首页">
         <span class="brand-bubble">5×</span>
-        <span><b>五语练习台</b><small>Speak beyond one language.</small></span>
+        <span><b>五语复习台</b><small>Five languages, one trail.</small></span>
       </a>
       <nav class="nav" aria-label="主导航">
-        <button class="nav-item active" data-view="practice"><span>✦</span> 开始练习</button>
-        <button class="nav-item" data-view="review"><span>⌁</span> 我的复习台</button>
+        <div class="nav-item active" aria-current="page"><span>⌁</span> 我的复习台</div>
       </nav>
       <div class="streak-note">
         <span class="tape"></span><span class="doodle">☀</span>
         <b id="session-count">从第 1 次开始</b>
-        <p>原文、读音、礼貌关系，<br>每次只练清楚一点。</p>
+        <p>原文、读音、礼貌关系，<br>每次只复习最该练的部分。</p>
       </div>
       <p class="local-note">◌ 五语记录只保存在本地</p>
     </aside>
 
     <main>
       <header class="topbar">
-        <span class="eyebrow">SOURCE-AWARE SPEAKING CLUB</span>
-        <div class="status-pill"><i></i><span id="save-status">本地工作台已连接</span></div>
+        <span class="eyebrow">FIVE LANGUAGES, ONE TRAIL</span>
+        <div class="status-pill"><i></i><span id="save-status">正在读取本地存档…</span></div>
       </header>
 
-      <section id="practice-view" class="view active">
-        <div class="hero compact-hero">
-          <div>
-            <span class="scribble-label">A1 · 30 个已审计场景包</span>
-            <h1>换一种语言，<br><em>把生活说出来。</em></h1>
-            <p>先选语言和场景，再复制指令。Skill 会从内置课程包生成预习卡，并在你准备好后开始角色扮演。</p>
-          </div>
-        </div>
-
-        <section class="planner paper-card">
-          <span class="corner-tag">STAGE 05</span>
-          <div class="section-heading"><div><span class="number-dot">1</span><h2>今天说哪种语言？</h2></div></div>
-          <div id="languages" class="topic-grid language-grid" role="radiogroup" aria-label="目标语言"></div>
-
-          <div class="rule squiggle"></div>
-          <div class="section-heading compact"><div><span class="number-dot coral">2</span><h2>选择生活场景</h2></div></div>
-          <div id="scenes" class="topic-grid scene-grid" role="radiogroup" aria-label="练习场景"></div>
-
-          <div class="session-options">
-            <fieldset><legend>练习时长</legend><div id="durations" class="choice-row compact-row"></div></fieldset>
-            <fieldset><legend>中文辅助</legend><div id="support-modes" class="choice-row compact-row"></div></fieldset>
-            <fieldset><legend>交互方式</legend><div id="interaction-modes" class="choice-row compact-row"></div></fieldset>
-          </div>
-
-          <button id="copy-prompt" class="primary-button"><span>复制练习指令</span><b>↗</b></button>
-          <p class="copy-help">复制后粘贴给 ChatGPT；练习结束后，结构化结果会归档到这个复习台。</p>
-        </section>
-      </section>
-
-      <section id="review-view" class="view">
+      <section id="review-view" class="view active">
         <div class="review-header">
-          <div><span class="scribble-label mint">FIVE LANGUAGES, ONE TRAIL</span><h1>我的复习台</h1><p>按语言和场景查看独立使用、提示使用与待复习表达。</p></div>
+          <div><span class="scribble-label mint">REVIEW, REPAIR, RETRY</span><h1>我的复习台</h1><p>语言和场景在对话中选择；这里保存真实表现、纠正和复练顺序。</p></div>
           <div class="review-stats">
             <div><b id="stat-sessions">0</b><span>次练习</span></div>
             <div><b id="stat-mastered">0</b><span>已掌握</span></div>
             <div><b id="stat-review">0</b><span>待复习</span></div>
           </div>
         </div>
-        <section id="recommendation-card" class="recommendation paper-card" aria-live="polite">
+
+        <section class="archive-note paper-card">
+          <div><span class="number-dot">✓</span><div><h2>练完会自动归档</h2><p>Skill 会保存独立表达、提示等级、重点纠正、发音证据和下一次复练目标。</p></div></div>
+          <button id="refresh-data" class="text-button" type="button">立即刷新 ↻</button>
+        </section>
+
+        <section id="recommendation-card" class="recommendation paper-card hidden" aria-live="polite">
           <div class="recommendation-copy">
-            <span class="scribble-label">NEXT BEST LESSON</span>
-            <h2 id="recommendation-title">正在计算下一课…</h2>
-            <p id="recommendation-reason">根据最近一次目标表现生成，不把提示复述算作独立掌握。</p>
+            <span class="scribble-label">NEXT REVIEW</span>
+            <h2 id="recommendation-title">正在计算复练内容…</h2>
+            <p id="recommendation-reason">只使用最近一次有效表现，不把提示复述算作独立掌握。</p>
             <div id="recommendation-targets" class="recommendation-targets"></div>
           </div>
-          <button id="use-recommendation" class="primary-button recommendation-button"><span>采用这节课</span><b>↗</b></button>
+          <button id="copy-review-prompt" class="primary-button recommendation-button"><span>复制复练指令</span><b>↗</b></button>
         </section>
+
         <div id="empty-review" class="empty-state paper-card">
           <span class="empty-face">◡̈</span>
           <h2>这里还没有五语足迹</h2>
-          <p>完成一次场景练习后，课程目标、掌握度和纠正记录会保存在这里。</p>
-          <button class="text-button" data-go-practice>去选语言和场景 →</button>
+          <p>直接回到对话开始练习。结束后无需在网页重复选择，课程目标、纠正和掌握度会自动出现在这里。</p>
         </div>
         <section id="queue-section" class="queue-section hidden">
           <div class="section-heading"><div><span class="number-dot coral">↻</span><h2>优先复习队列</h2></div><p>只看每个表达最近一次有效记录</p></div>

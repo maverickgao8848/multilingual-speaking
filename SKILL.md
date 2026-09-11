@@ -1,7 +1,6 @@
 ---
 name: multilingual-speaking
 description: Run A1 text or voice speaking practice in Spanish, French, German, Japanese, or Korean with Chinese guidance, a proactive 26-topic menu, source-aware preparation cards for six audited scenes, clearly labeled on-demand preparation for 20 additional practical scenes, role-play, correction, and review. Use whenever a learner wants guided speaking practice or asks what scenarios are available in any of these five languages.
-compatibility: Self-contained skill. Python 3.10+ is needed for bundled curriculum lookup and local workbench persistence; no external course-data directory or service is required.
 ---
 
 # Multilingual Speaking
@@ -97,13 +96,13 @@ When the learner clearly asks to stop, leave character immediately. Report:
 
 Never infer pronunciation from typed text or speech-to-text output. Only record an observed pronunciation note when actual audio was available under the evidence rules in the session protocol. Preserve acceptable regional forms and explain the variant instead of “correcting” them into the default standard.
 
-When local file access is available, archive the structured result unless the learner opts out. Resolve the script relative to this skill and run:
+When local file access is available, archive the structured result unless the learner opts out. Build it from evidence in the completed conversation, including actual learner wording, natural repairs, target status and support, up to three `focus_next` items, and one short `next_drill`. Do not leave the learner with JSON to file manually: write a temporary input file, execute the archive command, and confirm that the workbench was updated. Resolve the script relative to this skill and run:
 
 ```text
-python <skill-directory>/scripts/workbench.py archive --input <session.json> --data-dir <workbench-directory>
+python <skill-directory>/scripts/workbench.py archive --input <session.json>
 ```
 
-Default to `multilingual-speaking-workbench` in the active workspace. The archive tool restores each target's exact surface form, meaning, reading, romanization, adaptation, and source references from its `material_id`; do not hand-copy those provenance fields.
+The default data directory is `multilingual-speaking-workbench` in the learner's home directory so archive and serve operations always meet at the same history. Pass the same explicit `--data-dir <workbench-directory>` to both commands only when the learner requests another location. The archive tool restores each target's exact surface form, meaning, reading, romanization, adaptation, and source references from its `material_id`; do not hand-copy those provenance fields.
 
 When the learner asks what to practice next, use the workbench recommendation rather than guessing from the curriculum order. With the local server running, read `/api/recommendations`; otherwise use the rules in [references/workbench-data.md](references/workbench-data.md). Explain the selected scene and review targets briefly. Treat the queue as a recommendation derived from recorded evidence, not as a proficiency diagnosis.
 

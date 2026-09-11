@@ -1,6 +1,6 @@
 # Workbench data
 
-The multilingual workbench is a local, user-owned archive. It is separate from the English `kouyu` workbench and defaults to `multilingual-speaking-workbench` under the active workspace.
+The multilingual workbench is a local, user-owned archive. It is separate from the English `kouyu` workbench and defaults to `multilingual-speaking-workbench` in the learner's home directory. If the learner requests another directory, use that same explicit path for both archive and serve operations.
 
 ## Session input
 
@@ -56,12 +56,14 @@ Only audited Stage 2 material IDs can be archived. An ID from another language o
 ## Commands
 
 ```text
-python <skill-directory>/scripts/workbench.py init --data-dir <workbench>
-python <skill-directory>/scripts/workbench.py archive --input <session-json> --data-dir <workbench>
-python <skill-directory>/scripts/workbench.py serve --data-dir <workbench>
+python <skill-directory>/scripts/workbench.py init
+python <skill-directory>/scripts/workbench.py archive --input <session-json>
+python <skill-directory>/scripts/workbench.py serve
 ```
 
-`archive` is idempotent for an identical session. Reusing an ID with different content fails instead of overwriting history. `serve` opens the local planner and review UI; its default port is 8766.
+To store the workbench elsewhere, pass the same explicit `--data-dir <workbench>` to every command.
+
+`archive` is idempotent for an identical session. Reusing an ID with different content fails instead of overwriting history. `serve` opens the review-only UI; language, scene, duration, and support mode remain choices made in the conversation. The open page periodically reloads archive data so new records appear without restarting the server. Its default port is 8766.
 
 ## Adaptive review
 

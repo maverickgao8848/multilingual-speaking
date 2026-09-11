@@ -1,10 +1,10 @@
 # 多语种口语练习（Multilingual Speaking）
 
-一个面向 Codex 的 A1 多语种口语陪练 Skill，支持西班牙语、法语、德语、日语和韩语。它会先展示完整主题菜单和预习卡，再进入短回合角色扮演；练习结束后，可把真实表现归档到本地复习台。
+一个面向 Codex 的 A1 多语种口语陪练 Skill，支持西班牙语、法语、德语、日语和韩语。语言与主题在对话中确定，随后生成预习卡并进入短回合角色扮演；练习结束后会自动整理真实表现、纠正和下一步，并归档到本地复习台。
 
 这是独立于 [`kouyu`](https://github.com/maverickgao8848/kouyu) 的多语言版本。英语练习请使用 `kouyu`，本仓库专注西、法、德、日、韩五种语言。
 
-![多语种口语练习台](docs/screenshots/practice.png)
+![多语种复习台总览](docs/screenshots/practice.png)
 
 ## 能做什么
 
@@ -76,26 +76,28 @@ python scripts/materials.py card --language ja --scene directions --duration 20
 启动复习台：
 
 ```bash
-python scripts/workbench.py serve --data-dir multilingual-speaking-workbench
+python scripts/workbench.py serve
 ```
 
 Windows 安装后可从任意目录启动，并固定使用同一份数据：
 
 ```powershell
-python "$env:USERPROFILE/.codex/skills/multilingual-speaking/scripts/workbench.py" serve --data-dir "$env:USERPROFILE/multilingual-speaking-workbench"
+python "$env:USERPROFILE/.codex/skills/multilingual-speaking/scripts/workbench.py" serve
 ```
 
-终端会显示本地访问地址。保持终端运行，按 `Ctrl+C` 停止。复习台可以按语言和场景查看记录，并根据尚未掌握或需要复测的目标生成推荐。
+终端会显示本地访问地址。保持终端运行，按 `Ctrl+C` 停止。复习台不会再次要求选择语言或主题；它会按语言和场景展示真实表现、自然改法、提示依赖、发音证据和下次复练建议，并定时刷新。
+
+默认数据目录固定为用户主目录下的 `multilingual-speaking-workbench`，因此无论从哪个文件夹启动，归档与网页都会读取同一份历史。只有想更换存放位置时，才需要给 `archive` 和 `serve` 同时传入相同的 `--data-dir`。
 
 ![多语种复习台](docs/screenshots/review.png)
 
 归档一次训练：
 
 ```bash
-python scripts/workbench.py archive --input path/to/session.json --data-dir multilingual-speaking-workbench
+python scripts/workbench.py archive --input path/to/session.json
 ```
 
-Session 格式和证据规则见 [复习台数据规范](references/workbench-data.md)。
+Session 格式和证据规则见 [复习台数据规范](references/workbench-data.md)。正常练习结束时 Skill 会根据本次对话直接执行归档，不需要学习者手工维护 JSON。
 
 ## 项目结构
 

@@ -1,0 +1,1688 @@
+{
+  "schema_version": 1,
+  "description": "Source-aware A1 target expansions for 20- and 40-minute preparation cards. Entries are original rewrites grounded by each base pack's source_refs; partial source mappings retain their declared coverage boundary.",
+  "packs": {
+    "es.cafe-order": {
+      "keywords": [
+        {
+          "surface": "el café",
+          "meaning_zh": "咖啡"
+        },
+        {
+          "surface": "la leche",
+          "meaning_zh": "牛奶"
+        },
+        {
+          "surface": "el vaso",
+          "meaning_zh": "杯子"
+        },
+        {
+          "surface": "la cuenta",
+          "meaning_zh": "账单"
+        },
+        {
+          "surface": "el efectivo",
+          "meaning_zh": "现金"
+        },
+        {
+          "surface": "descafeinado",
+          "meaning_zh": "无咖啡因的"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "con leche",
+          "meaning_zh": "加牛奶"
+        },
+        {
+          "surface": "para aquí",
+          "meaning_zh": "堂食"
+        },
+        {
+          "surface": "un café mediano",
+          "meaning_zh": "一杯中杯咖啡"
+        },
+        {
+          "surface": "pagar en efectivo",
+          "meaning_zh": "用现金支付"
+        },
+        {
+          "surface": "la cuenta, por favor",
+          "meaning_zh": "请结账"
+        },
+        {
+          "surface": "¿Algo más?",
+          "meaning_zh": "还需要别的吗？"
+        }
+      ]
+    },
+    "es.directions-transit": {
+      "keywords": [
+        {
+          "surface": "la parada",
+          "meaning_zh": "车站；停靠站"
+        },
+        {
+          "surface": "el autobús",
+          "meaning_zh": "公交车"
+        },
+        {
+          "surface": "el metro",
+          "meaning_zh": "地铁"
+        },
+        {
+          "surface": "la calle",
+          "meaning_zh": "街道"
+        },
+        {
+          "surface": "el mapa",
+          "meaning_zh": "地图"
+        },
+        {
+          "surface": "el boleto",
+          "meaning_zh": "车票"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "cerca de",
+          "meaning_zh": "在……附近"
+        },
+        {
+          "surface": "lejos de",
+          "meaning_zh": "离……远"
+        },
+        {
+          "surface": "gire a la izquierda",
+          "meaning_zh": "请向左转"
+        },
+        {
+          "surface": "tome el metro",
+          "meaning_zh": "请乘地铁"
+        },
+        {
+          "surface": "en la próxima parada",
+          "meaning_zh": "在下一站"
+        },
+        {
+          "surface": "¿Dónde está...?",
+          "meaning_zh": "……在哪里？"
+        }
+      ]
+    },
+    "es.doctor-visit": {
+      "keywords": [
+        {
+          "surface": "la fiebre",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "la tos",
+          "meaning_zh": "咳嗽"
+        },
+        {
+          "surface": "la cabeza",
+          "meaning_zh": "头"
+        },
+        {
+          "surface": "la medicina",
+          "meaning_zh": "药"
+        },
+        {
+          "surface": "la receta",
+          "meaning_zh": "处方"
+        },
+        {
+          "surface": "la farmacia",
+          "meaning_zh": "药店"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "me duele la cabeza",
+          "meaning_zh": "我头疼"
+        },
+        {
+          "surface": "tengo fiebre",
+          "meaning_zh": "我发烧了"
+        },
+        {
+          "surface": "estar enfermo/a",
+          "meaning_zh": "生病"
+        },
+        {
+          "surface": "tomar la medicina",
+          "meaning_zh": "吃药"
+        },
+        {
+          "surface": "antes de comer",
+          "meaning_zh": "饭前"
+        },
+        {
+          "surface": "soy alérgico/a a...",
+          "meaning_zh": "我对……过敏"
+        }
+      ]
+    },
+    "es.introductions": {
+      "keywords": [
+        {
+          "surface": "el apellido",
+          "meaning_zh": "姓氏"
+        },
+        {
+          "surface": "la ciudad",
+          "meaning_zh": "城市"
+        },
+        {
+          "surface": "el trabajo",
+          "meaning_zh": "工作"
+        },
+        {
+          "surface": "el/la estudiante",
+          "meaning_zh": "学生"
+        },
+        {
+          "surface": "el idioma",
+          "meaning_zh": "语言"
+        },
+        {
+          "surface": "la afición",
+          "meaning_zh": "爱好"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "me llamo...",
+          "meaning_zh": "我叫……"
+        },
+        {
+          "surface": "vivo en...",
+          "meaning_zh": "我住在……"
+        },
+        {
+          "surface": "trabajo como...",
+          "meaning_zh": "我的职业是……"
+        },
+        {
+          "surface": "estudio en...",
+          "meaning_zh": "我在……学习"
+        },
+        {
+          "surface": "hablo un poco de...",
+          "meaning_zh": "我会说一点……"
+        },
+        {
+          "surface": "encantado/a de conocerte",
+          "meaning_zh": "很高兴认识你"
+        }
+      ]
+    },
+    "es.shopping": {
+      "keywords": [
+        {
+          "surface": "el color",
+          "meaning_zh": "颜色"
+        },
+        {
+          "surface": "la camisa",
+          "meaning_zh": "衬衫"
+        },
+        {
+          "surface": "el pantalón",
+          "meaning_zh": "裤子"
+        },
+        {
+          "surface": "el descuento",
+          "meaning_zh": "折扣"
+        },
+        {
+          "surface": "la caja",
+          "meaning_zh": "收银台"
+        },
+        {
+          "surface": "el recibo",
+          "meaning_zh": "收据"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "en otro color",
+          "meaning_zh": "换一种颜色"
+        },
+        {
+          "surface": "una talla más grande",
+          "meaning_zh": "大一码"
+        },
+        {
+          "surface": "una talla más pequeña",
+          "meaning_zh": "小一码"
+        },
+        {
+          "surface": "estar en oferta",
+          "meaning_zh": "正在打折"
+        },
+        {
+          "surface": "me queda bien",
+          "meaning_zh": "很合身"
+        },
+        {
+          "surface": "cambiar este artículo",
+          "meaning_zh": "更换这件商品"
+        }
+      ]
+    },
+    "es.making-plans": {
+      "keywords": [
+        {
+          "surface": "la tarde",
+          "meaning_zh": "下午"
+        },
+        {
+          "surface": "el sábado",
+          "meaning_zh": "星期六"
+        },
+        {
+          "surface": "el cine",
+          "meaning_zh": "电影院"
+        },
+        {
+          "surface": "el restaurante",
+          "meaning_zh": "餐馆"
+        },
+        {
+          "surface": "el lugar",
+          "meaning_zh": "地点"
+        },
+        {
+          "surface": "el mensaje",
+          "meaning_zh": "消息"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "este fin de semana",
+          "meaning_zh": "这个周末"
+        },
+        {
+          "surface": "a las seis",
+          "meaning_zh": "六点钟"
+        },
+        {
+          "surface": "delante de...",
+          "meaning_zh": "在……前面"
+        },
+        {
+          "surface": "me parece bien",
+          "meaning_zh": "我觉得可以"
+        },
+        {
+          "surface": "lo siento, no puedo",
+          "meaning_zh": "抱歉，我不行"
+        },
+        {
+          "surface": "otro día",
+          "meaning_zh": "改天"
+        }
+      ]
+    },
+    "fr.cafe-order": {
+      "keywords": [
+        {
+          "surface": "le café",
+          "meaning_zh": "咖啡"
+        },
+        {
+          "surface": "le lait",
+          "meaning_zh": "牛奶"
+        },
+        {
+          "surface": "la tasse",
+          "meaning_zh": "杯子"
+        },
+        {
+          "surface": "l'addition",
+          "meaning_zh": "账单"
+        },
+        {
+          "surface": "les espèces",
+          "meaning_zh": "现金"
+        },
+        {
+          "surface": "décaféiné",
+          "meaning_zh": "无咖啡因的"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "avec du lait",
+          "meaning_zh": "加牛奶"
+        },
+        {
+          "surface": "sur place",
+          "meaning_zh": "堂食"
+        },
+        {
+          "surface": "un café moyen",
+          "meaning_zh": "一杯中杯咖啡"
+        },
+        {
+          "surface": "payer en espèces",
+          "meaning_zh": "用现金支付"
+        },
+        {
+          "surface": "l'addition, s'il vous plaît",
+          "meaning_zh": "请结账"
+        },
+        {
+          "surface": "Ce sera tout.",
+          "meaning_zh": "就这些。"
+        }
+      ]
+    },
+    "fr.directions-transit": {
+      "keywords": [
+        {
+          "surface": "l'arrêt",
+          "meaning_zh": "停靠站"
+        },
+        {
+          "surface": "le bus",
+          "meaning_zh": "公交车"
+        },
+        {
+          "surface": "le métro",
+          "meaning_zh": "地铁"
+        },
+        {
+          "surface": "la rue",
+          "meaning_zh": "街道"
+        },
+        {
+          "surface": "le plan",
+          "meaning_zh": "地图"
+        },
+        {
+          "surface": "le billet",
+          "meaning_zh": "车票"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "près de",
+          "meaning_zh": "在……附近"
+        },
+        {
+          "surface": "loin de",
+          "meaning_zh": "离……远"
+        },
+        {
+          "surface": "tournez à gauche",
+          "meaning_zh": "请向左转"
+        },
+        {
+          "surface": "prenez le métro",
+          "meaning_zh": "请乘地铁"
+        },
+        {
+          "surface": "au prochain arrêt",
+          "meaning_zh": "在下一站"
+        },
+        {
+          "surface": "Où se trouve...?",
+          "meaning_zh": "……在哪里？"
+        }
+      ]
+    },
+    "fr.doctor-visit": {
+      "keywords": [
+        {
+          "surface": "la fièvre",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "la toux",
+          "meaning_zh": "咳嗽"
+        },
+        {
+          "surface": "la tête",
+          "meaning_zh": "头"
+        },
+        {
+          "surface": "le médicament",
+          "meaning_zh": "药"
+        },
+        {
+          "surface": "l'ordonnance",
+          "meaning_zh": "处方"
+        },
+        {
+          "surface": "la pharmacie",
+          "meaning_zh": "药店"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "avoir mal à la tête",
+          "meaning_zh": "头疼"
+        },
+        {
+          "surface": "avoir de la fièvre",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "être malade",
+          "meaning_zh": "生病"
+        },
+        {
+          "surface": "prendre le médicament",
+          "meaning_zh": "吃药"
+        },
+        {
+          "surface": "avant le repas",
+          "meaning_zh": "饭前"
+        },
+        {
+          "surface": "être allergique à...",
+          "meaning_zh": "对……过敏"
+        }
+      ]
+    },
+    "fr.introductions": {
+      "keywords": [
+        {
+          "surface": "le nom",
+          "meaning_zh": "姓氏"
+        },
+        {
+          "surface": "la ville",
+          "meaning_zh": "城市"
+        },
+        {
+          "surface": "le travail",
+          "meaning_zh": "工作"
+        },
+        {
+          "surface": "l'étudiant(e)",
+          "meaning_zh": "学生"
+        },
+        {
+          "surface": "la langue",
+          "meaning_zh": "语言"
+        },
+        {
+          "surface": "le loisir",
+          "meaning_zh": "爱好；休闲活动"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "mon nom est...",
+          "meaning_zh": "我姓……"
+        },
+        {
+          "surface": "j'habite à...",
+          "meaning_zh": "我住在……"
+        },
+        {
+          "surface": "je travaille comme...",
+          "meaning_zh": "我的职业是……"
+        },
+        {
+          "surface": "j'étudie à...",
+          "meaning_zh": "我在……学习"
+        },
+        {
+          "surface": "je parle un peu...",
+          "meaning_zh": "我会说一点……"
+        },
+        {
+          "surface": "ravi(e) de vous rencontrer",
+          "meaning_zh": "很高兴认识您"
+        }
+      ]
+    },
+    "fr.shopping": {
+      "keywords": [
+        {
+          "surface": "le produit",
+          "meaning_zh": "商品"
+        },
+        {
+          "surface": "la quantité",
+          "meaning_zh": "数量"
+        },
+        {
+          "surface": "le paquet",
+          "meaning_zh": "一包"
+        },
+        {
+          "surface": "la bouteille",
+          "meaning_zh": "一瓶"
+        },
+        {
+          "surface": "la caisse",
+          "meaning_zh": "收银台"
+        },
+        {
+          "surface": "le reçu",
+          "meaning_zh": "收据"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "un paquet de...",
+          "meaning_zh": "一包……"
+        },
+        {
+          "surface": "une bouteille de...",
+          "meaning_zh": "一瓶……"
+        },
+        {
+          "surface": "combien ça coûte",
+          "meaning_zh": "这个多少钱"
+        },
+        {
+          "surface": "avoir en stock",
+          "meaning_zh": "有现货"
+        },
+        {
+          "surface": "payer par carte",
+          "meaning_zh": "刷卡支付"
+        },
+        {
+          "surface": "C'est tout, merci.",
+          "meaning_zh": "就这些，谢谢。"
+        }
+      ]
+    },
+    "fr.making-plans": {
+      "keywords": [
+        {
+          "surface": "l'après-midi",
+          "meaning_zh": "下午"
+        },
+        {
+          "surface": "samedi",
+          "meaning_zh": "星期六"
+        },
+        {
+          "surface": "le cinéma",
+          "meaning_zh": "电影院"
+        },
+        {
+          "surface": "le restaurant",
+          "meaning_zh": "餐馆"
+        },
+        {
+          "surface": "le lieu",
+          "meaning_zh": "地点"
+        },
+        {
+          "surface": "le message",
+          "meaning_zh": "消息"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "ce week-end",
+          "meaning_zh": "这个周末"
+        },
+        {
+          "surface": "à six heures",
+          "meaning_zh": "六点钟"
+        },
+        {
+          "surface": "devant...",
+          "meaning_zh": "在……前面"
+        },
+        {
+          "surface": "bonne idée",
+          "meaning_zh": "好主意"
+        },
+        {
+          "surface": "désolé(e), je ne peux pas",
+          "meaning_zh": "抱歉，我不行"
+        },
+        {
+          "surface": "un autre jour",
+          "meaning_zh": "改天"
+        }
+      ]
+    },
+    "de.cafe-order": {
+      "keywords": [
+        {
+          "surface": "der Kaffee",
+          "meaning_zh": "咖啡"
+        },
+        {
+          "surface": "die Milch",
+          "meaning_zh": "牛奶"
+        },
+        {
+          "surface": "die Tasse",
+          "meaning_zh": "杯子"
+        },
+        {
+          "surface": "die Rechnung",
+          "meaning_zh": "账单"
+        },
+        {
+          "surface": "das Bargeld",
+          "meaning_zh": "现金"
+        },
+        {
+          "surface": "koffeinfrei",
+          "meaning_zh": "无咖啡因的"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "mit Milch",
+          "meaning_zh": "加牛奶"
+        },
+        {
+          "surface": "für hier",
+          "meaning_zh": "堂食"
+        },
+        {
+          "surface": "einen mittelgroßen Kaffee",
+          "meaning_zh": "一杯中杯咖啡"
+        },
+        {
+          "surface": "bar bezahlen",
+          "meaning_zh": "用现金支付"
+        },
+        {
+          "surface": "die Rechnung, bitte",
+          "meaning_zh": "请结账"
+        },
+        {
+          "surface": "Das ist alles.",
+          "meaning_zh": "就这些。"
+        }
+      ]
+    },
+    "de.directions-transit": {
+      "keywords": [
+        {
+          "surface": "die Haltestelle",
+          "meaning_zh": "停靠站"
+        },
+        {
+          "surface": "der Bus",
+          "meaning_zh": "公交车"
+        },
+        {
+          "surface": "die U-Bahn",
+          "meaning_zh": "地铁"
+        },
+        {
+          "surface": "die Straße",
+          "meaning_zh": "街道"
+        },
+        {
+          "surface": "der Stadtplan",
+          "meaning_zh": "城市地图"
+        },
+        {
+          "surface": "die Fahrkarte",
+          "meaning_zh": "车票"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "in der Nähe von",
+          "meaning_zh": "在……附近"
+        },
+        {
+          "surface": "weit weg von",
+          "meaning_zh": "离……远"
+        },
+        {
+          "surface": "links abbiegen",
+          "meaning_zh": "向左转"
+        },
+        {
+          "surface": "mit der U-Bahn fahren",
+          "meaning_zh": "乘地铁"
+        },
+        {
+          "surface": "an der nächsten Haltestelle",
+          "meaning_zh": "在下一站"
+        },
+        {
+          "surface": "Wo ist...?",
+          "meaning_zh": "……在哪里？"
+        }
+      ]
+    },
+    "de.doctor-visit": {
+      "keywords": [
+        {
+          "surface": "das Fieber",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "der Husten",
+          "meaning_zh": "咳嗽"
+        },
+        {
+          "surface": "der Kopf",
+          "meaning_zh": "头"
+        },
+        {
+          "surface": "das Medikament",
+          "meaning_zh": "药"
+        },
+        {
+          "surface": "das Rezept",
+          "meaning_zh": "处方"
+        },
+        {
+          "surface": "die Apotheke",
+          "meaning_zh": "药店"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "Kopfschmerzen haben",
+          "meaning_zh": "头疼"
+        },
+        {
+          "surface": "Fieber haben",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "krank sein",
+          "meaning_zh": "生病"
+        },
+        {
+          "surface": "das Medikament nehmen",
+          "meaning_zh": "吃药"
+        },
+        {
+          "surface": "vor dem Essen",
+          "meaning_zh": "饭前"
+        },
+        {
+          "surface": "allergisch gegen...",
+          "meaning_zh": "对……过敏"
+        }
+      ]
+    },
+    "de.introductions": {
+      "keywords": [
+        {
+          "surface": "der Nachname",
+          "meaning_zh": "姓氏"
+        },
+        {
+          "surface": "die Stadt",
+          "meaning_zh": "城市"
+        },
+        {
+          "surface": "die Arbeit",
+          "meaning_zh": "工作"
+        },
+        {
+          "surface": "der Student / die Studentin",
+          "meaning_zh": "大学生"
+        },
+        {
+          "surface": "die Sprache",
+          "meaning_zh": "语言"
+        },
+        {
+          "surface": "das Hobby",
+          "meaning_zh": "爱好"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "Ich heiße...",
+          "meaning_zh": "我叫……"
+        },
+        {
+          "surface": "Ich wohne in...",
+          "meaning_zh": "我住在……"
+        },
+        {
+          "surface": "Ich arbeite als...",
+          "meaning_zh": "我的职业是……"
+        },
+        {
+          "surface": "Ich studiere an...",
+          "meaning_zh": "我在……上大学"
+        },
+        {
+          "surface": "Ich spreche ein bisschen...",
+          "meaning_zh": "我会说一点……"
+        },
+        {
+          "surface": "Freut mich, Sie kennenzulernen.",
+          "meaning_zh": "很高兴认识您。"
+        }
+      ]
+    },
+    "de.shopping": {
+      "keywords": [
+        {
+          "surface": "die Farbe",
+          "meaning_zh": "颜色"
+        },
+        {
+          "surface": "das Hemd",
+          "meaning_zh": "衬衫"
+        },
+        {
+          "surface": "die Hose",
+          "meaning_zh": "裤子"
+        },
+        {
+          "surface": "der Rabatt",
+          "meaning_zh": "折扣"
+        },
+        {
+          "surface": "die Kasse",
+          "meaning_zh": "收银台"
+        },
+        {
+          "surface": "der Kassenbon",
+          "meaning_zh": "收据"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "in einer anderen Farbe",
+          "meaning_zh": "换一种颜色"
+        },
+        {
+          "surface": "eine Nummer größer",
+          "meaning_zh": "大一码"
+        },
+        {
+          "surface": "eine Nummer kleiner",
+          "meaning_zh": "小一码"
+        },
+        {
+          "surface": "im Angebot sein",
+          "meaning_zh": "正在打折"
+        },
+        {
+          "surface": "gut passen",
+          "meaning_zh": "很合身"
+        },
+        {
+          "surface": "diesen Artikel umtauschen",
+          "meaning_zh": "更换这件商品"
+        }
+      ]
+    },
+    "de.making-plans": {
+      "keywords": [
+        {
+          "surface": "der Nachmittag",
+          "meaning_zh": "下午"
+        },
+        {
+          "surface": "der Samstag",
+          "meaning_zh": "星期六"
+        },
+        {
+          "surface": "das Kino",
+          "meaning_zh": "电影院"
+        },
+        {
+          "surface": "das Restaurant",
+          "meaning_zh": "餐馆"
+        },
+        {
+          "surface": "der Ort",
+          "meaning_zh": "地点"
+        },
+        {
+          "surface": "die Nachricht",
+          "meaning_zh": "消息"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "dieses Wochenende",
+          "meaning_zh": "这个周末"
+        },
+        {
+          "surface": "um sechs Uhr",
+          "meaning_zh": "六点钟"
+        },
+        {
+          "surface": "vor dem...",
+          "meaning_zh": "在……前面"
+        },
+        {
+          "surface": "gute Idee",
+          "meaning_zh": "好主意"
+        },
+        {
+          "surface": "Tut mir leid, ich kann nicht.",
+          "meaning_zh": "抱歉，我不行。"
+        },
+        {
+          "surface": "an einem anderen Tag",
+          "meaning_zh": "改天"
+        }
+      ]
+    },
+    "ja.cafe-order": {
+      "keywords": [
+        {
+          "surface": "コーヒー",
+          "meaning_zh": "咖啡"
+        },
+        {
+          "surface": "牛乳",
+          "reading": "ぎゅうにゅう",
+          "meaning_zh": "牛奶"
+        },
+        {
+          "surface": "カップ",
+          "meaning_zh": "杯子"
+        },
+        {
+          "surface": "会計",
+          "reading": "かいけい",
+          "meaning_zh": "结账"
+        },
+        {
+          "surface": "現金",
+          "reading": "げんきん",
+          "meaning_zh": "现金"
+        },
+        {
+          "surface": "デカフェ",
+          "meaning_zh": "无咖啡因咖啡"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "ミルク入り",
+          "reading": "ミルクいり",
+          "meaning_zh": "加牛奶"
+        },
+        {
+          "surface": "店内で",
+          "reading": "てんないで",
+          "meaning_zh": "堂食"
+        },
+        {
+          "surface": "Mサイズのコーヒー",
+          "meaning_zh": "一杯中杯咖啡"
+        },
+        {
+          "surface": "現金で払う",
+          "reading": "げんきんではらう",
+          "meaning_zh": "用现金支付"
+        },
+        {
+          "surface": "お会計をお願いします",
+          "reading": "おかいけいをおねがいします",
+          "meaning_zh": "请结账"
+        },
+        {
+          "surface": "以上です",
+          "reading": "いじょうです",
+          "meaning_zh": "就这些。"
+        }
+      ]
+    },
+    "ja.directions-transit": {
+      "keywords": [
+        {
+          "surface": "バス停",
+          "reading": "バスてい",
+          "meaning_zh": "公交车站"
+        },
+        {
+          "surface": "バス",
+          "meaning_zh": "公交车"
+        },
+        {
+          "surface": "地下鉄",
+          "reading": "ちかてつ",
+          "meaning_zh": "地铁"
+        },
+        {
+          "surface": "道",
+          "reading": "みち",
+          "meaning_zh": "路"
+        },
+        {
+          "surface": "地図",
+          "reading": "ちず",
+          "meaning_zh": "地图"
+        },
+        {
+          "surface": "切符",
+          "reading": "きっぷ",
+          "meaning_zh": "车票"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "～の近く",
+          "reading": "～のちかく",
+          "meaning_zh": "在……附近"
+        },
+        {
+          "surface": "～から遠い",
+          "reading": "～からとおい",
+          "meaning_zh": "离……远"
+        },
+        {
+          "surface": "左に曲がる",
+          "reading": "ひだりにまがる",
+          "meaning_zh": "向左转"
+        },
+        {
+          "surface": "地下鉄に乗る",
+          "reading": "ちかてつにのる",
+          "meaning_zh": "乘地铁"
+        },
+        {
+          "surface": "次の駅で",
+          "reading": "つぎのえきで",
+          "meaning_zh": "在下一站"
+        },
+        {
+          "surface": "～はどこですか",
+          "meaning_zh": "……在哪里？"
+        }
+      ]
+    },
+    "ja.doctor-visit": {
+      "keywords": [
+        {
+          "surface": "熱",
+          "reading": "ねつ",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "せき",
+          "meaning_zh": "咳嗽"
+        },
+        {
+          "surface": "頭",
+          "reading": "あたま",
+          "meaning_zh": "头"
+        },
+        {
+          "surface": "薬",
+          "reading": "くすり",
+          "meaning_zh": "药"
+        },
+        {
+          "surface": "処方箋",
+          "reading": "しょほうせん",
+          "meaning_zh": "处方"
+        },
+        {
+          "surface": "薬局",
+          "reading": "やっきょく",
+          "meaning_zh": "药店"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "頭が痛い",
+          "reading": "あたまがいたい",
+          "meaning_zh": "头疼"
+        },
+        {
+          "surface": "熱がある",
+          "reading": "ねつがある",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "具合が悪い",
+          "reading": "ぐあいがわるい",
+          "meaning_zh": "身体不舒服"
+        },
+        {
+          "surface": "薬を飲む",
+          "reading": "くすりをのむ",
+          "meaning_zh": "吃药"
+        },
+        {
+          "surface": "食事の前",
+          "reading": "しょくじのまえ",
+          "meaning_zh": "饭前"
+        },
+        {
+          "surface": "～のアレルギーがある",
+          "meaning_zh": "对……过敏"
+        }
+      ]
+    },
+    "ja.introductions": {
+      "keywords": [
+        {
+          "surface": "名字",
+          "reading": "みょうじ",
+          "meaning_zh": "姓氏"
+        },
+        {
+          "surface": "町",
+          "reading": "まち",
+          "meaning_zh": "城市；城镇"
+        },
+        {
+          "surface": "仕事",
+          "reading": "しごと",
+          "meaning_zh": "工作"
+        },
+        {
+          "surface": "学生",
+          "reading": "がくせい",
+          "meaning_zh": "学生"
+        },
+        {
+          "surface": "言語",
+          "reading": "げんご",
+          "meaning_zh": "语言"
+        },
+        {
+          "surface": "趣味",
+          "reading": "しゅみ",
+          "meaning_zh": "爱好"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "～と申します",
+          "reading": "～ともうします",
+          "meaning_zh": "我叫……（礼貌）"
+        },
+        {
+          "surface": "～に住んでいます",
+          "reading": "～にすんでいます",
+          "meaning_zh": "我住在……"
+        },
+        {
+          "surface": "～として働いています",
+          "reading": "～としてはたらいています",
+          "meaning_zh": "我的职业是……"
+        },
+        {
+          "surface": "～で勉強しています",
+          "reading": "～でべんきょうしています",
+          "meaning_zh": "我在……学习"
+        },
+        {
+          "surface": "～が少し話せます",
+          "reading": "～がすこしはなせます",
+          "meaning_zh": "我会说一点……"
+        },
+        {
+          "surface": "お会いできてうれしいです",
+          "reading": "おあいできてうれしいです",
+          "meaning_zh": "很高兴认识您"
+        }
+      ]
+    },
+    "ja.shopping": {
+      "keywords": [
+        {
+          "surface": "商品",
+          "reading": "しょうひん",
+          "meaning_zh": "商品"
+        },
+        {
+          "surface": "色",
+          "reading": "いろ",
+          "meaning_zh": "颜色"
+        },
+        {
+          "surface": "服",
+          "reading": "ふく",
+          "meaning_zh": "衣服"
+        },
+        {
+          "surface": "文房具",
+          "reading": "ぶんぼうぐ",
+          "meaning_zh": "文具"
+        },
+        {
+          "surface": "店",
+          "reading": "みせ",
+          "meaning_zh": "商店"
+        },
+        {
+          "surface": "値段",
+          "reading": "ねだん",
+          "meaning_zh": "价格"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "別の色",
+          "reading": "べつのいろ",
+          "meaning_zh": "另一种颜色"
+        },
+        {
+          "surface": "大きいサイズ",
+          "reading": "おおきいサイズ",
+          "meaning_zh": "大一码"
+        },
+        {
+          "surface": "小さいサイズ",
+          "reading": "ちいさいサイズ",
+          "meaning_zh": "小一码"
+        },
+        {
+          "surface": "服を買う",
+          "reading": "ふくをかう",
+          "meaning_zh": "买衣服"
+        },
+        {
+          "surface": "文房具を探す",
+          "reading": "ぶんぼうぐをさがす",
+          "meaning_zh": "找文具"
+        },
+        {
+          "surface": "店に行く",
+          "reading": "みせにいく",
+          "meaning_zh": "去商店"
+        }
+      ]
+    },
+    "ja.making-plans": {
+      "keywords": [
+        {
+          "surface": "午後",
+          "reading": "ごご",
+          "meaning_zh": "下午"
+        },
+        {
+          "surface": "土曜日",
+          "reading": "どようび",
+          "meaning_zh": "星期六"
+        },
+        {
+          "surface": "映画館",
+          "reading": "えいがかん",
+          "meaning_zh": "电影院"
+        },
+        {
+          "surface": "レストラン",
+          "meaning_zh": "餐馆"
+        },
+        {
+          "surface": "場所",
+          "reading": "ばしょ",
+          "meaning_zh": "地点"
+        },
+        {
+          "surface": "連絡",
+          "reading": "れんらく",
+          "meaning_zh": "联系"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "今週末",
+          "reading": "こんしゅうまつ",
+          "meaning_zh": "这个周末"
+        },
+        {
+          "surface": "六時に",
+          "reading": "ろくじに",
+          "meaning_zh": "六点钟"
+        },
+        {
+          "surface": "～の前で",
+          "reading": "～のまえで",
+          "meaning_zh": "在……前面"
+        },
+        {
+          "surface": "いいですね",
+          "meaning_zh": "好啊"
+        },
+        {
+          "surface": "すみません、行けません",
+          "reading": "すみません、いけません",
+          "meaning_zh": "抱歉，我去不了"
+        },
+        {
+          "surface": "別の日",
+          "reading": "べつのひ",
+          "meaning_zh": "改天"
+        }
+      ]
+    },
+    "ko.cafe-order": {
+      "keywords": [
+        {
+          "surface": "커피",
+          "meaning_zh": "咖啡"
+        },
+        {
+          "surface": "우유",
+          "meaning_zh": "牛奶"
+        },
+        {
+          "surface": "컵",
+          "meaning_zh": "杯子"
+        },
+        {
+          "surface": "계산",
+          "meaning_zh": "结账"
+        },
+        {
+          "surface": "현금",
+          "meaning_zh": "现金"
+        },
+        {
+          "surface": "디카페인",
+          "meaning_zh": "无咖啡因的"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "우유 넣어서",
+          "meaning_zh": "加牛奶"
+        },
+        {
+          "surface": "매장에서",
+          "meaning_zh": "堂食"
+        },
+        {
+          "surface": "중간 사이즈 커피",
+          "meaning_zh": "一杯中杯咖啡"
+        },
+        {
+          "surface": "현금으로 계산하다",
+          "meaning_zh": "用现金支付"
+        },
+        {
+          "surface": "계산해 주세요",
+          "meaning_zh": "请结账"
+        },
+        {
+          "surface": "이게 다예요",
+          "meaning_zh": "就这些。"
+        }
+      ]
+    },
+    "ko.directions-transit": {
+      "keywords": [
+        {
+          "surface": "정류장",
+          "meaning_zh": "停靠站"
+        },
+        {
+          "surface": "버스",
+          "meaning_zh": "公交车"
+        },
+        {
+          "surface": "지하철",
+          "meaning_zh": "地铁"
+        },
+        {
+          "surface": "길",
+          "meaning_zh": "路"
+        },
+        {
+          "surface": "지도",
+          "meaning_zh": "地图"
+        },
+        {
+          "surface": "표",
+          "meaning_zh": "车票"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "가까이에",
+          "meaning_zh": "在附近"
+        },
+        {
+          "surface": "멀리 있어요",
+          "meaning_zh": "离得很远"
+        },
+        {
+          "surface": "왼쪽으로 가세요",
+          "meaning_zh": "请向左走"
+        },
+        {
+          "surface": "지하철을 타세요",
+          "meaning_zh": "请乘地铁"
+        },
+        {
+          "surface": "다음 역에서",
+          "meaning_zh": "在下一站"
+        },
+        {
+          "surface": "어디에 있어요?",
+          "meaning_zh": "在哪里？"
+        }
+      ]
+    },
+    "ko.doctor-visit": {
+      "keywords": [
+        {
+          "surface": "열",
+          "meaning_zh": "发烧"
+        },
+        {
+          "surface": "기침",
+          "meaning_zh": "咳嗽"
+        },
+        {
+          "surface": "머리",
+          "meaning_zh": "头"
+        },
+        {
+          "surface": "약",
+          "meaning_zh": "药"
+        },
+        {
+          "surface": "처방전",
+          "meaning_zh": "处方"
+        },
+        {
+          "surface": "약국",
+          "meaning_zh": "药店"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "머리가 아파요",
+          "meaning_zh": "我头疼"
+        },
+        {
+          "surface": "열이 나요",
+          "meaning_zh": "我发烧了"
+        },
+        {
+          "surface": "몸이 안 좋아요",
+          "meaning_zh": "身体不舒服"
+        },
+        {
+          "surface": "약을 먹어요",
+          "meaning_zh": "吃药"
+        },
+        {
+          "surface": "식사 전에",
+          "meaning_zh": "饭前"
+        },
+        {
+          "surface": "～에 알레르기가 있어요",
+          "meaning_zh": "对……过敏"
+        }
+      ]
+    },
+    "ko.introductions": {
+      "keywords": [
+        {
+          "surface": "성",
+          "meaning_zh": "姓氏"
+        },
+        {
+          "surface": "도시",
+          "meaning_zh": "城市"
+        },
+        {
+          "surface": "일",
+          "meaning_zh": "工作"
+        },
+        {
+          "surface": "학생",
+          "meaning_zh": "学生"
+        },
+        {
+          "surface": "언어",
+          "meaning_zh": "语言"
+        },
+        {
+          "surface": "취미",
+          "meaning_zh": "爱好"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "제 이름은 ～예요",
+          "meaning_zh": "我叫……"
+        },
+        {
+          "surface": "～에 살아요",
+          "meaning_zh": "我住在……"
+        },
+        {
+          "surface": "～(으)로 일해요",
+          "meaning_zh": "我的职业是……"
+        },
+        {
+          "surface": "～에서 공부해요",
+          "meaning_zh": "我在……学习"
+        },
+        {
+          "surface": "～어를 조금 할 수 있어요",
+          "meaning_zh": "我会说一点……"
+        },
+        {
+          "surface": "알게 돼서 반가워요",
+          "meaning_zh": "很高兴认识您"
+        }
+      ]
+    },
+    "ko.shopping": {
+      "keywords": [
+        {
+          "surface": "색",
+          "meaning_zh": "颜色"
+        },
+        {
+          "surface": "옷",
+          "meaning_zh": "衣服"
+        },
+        {
+          "surface": "바지",
+          "meaning_zh": "裤子"
+        },
+        {
+          "surface": "할인",
+          "meaning_zh": "折扣"
+        },
+        {
+          "surface": "계산대",
+          "meaning_zh": "收银台"
+        },
+        {
+          "surface": "영수증",
+          "meaning_zh": "收据"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "다른 색으로",
+          "meaning_zh": "换一种颜色"
+        },
+        {
+          "surface": "한 사이즈 크게",
+          "meaning_zh": "大一码"
+        },
+        {
+          "surface": "한 사이즈 작게",
+          "meaning_zh": "小一码"
+        },
+        {
+          "surface": "할인 중이에요",
+          "meaning_zh": "正在打折"
+        },
+        {
+          "surface": "잘 맞아요",
+          "meaning_zh": "很合身"
+        },
+        {
+          "surface": "이거 교환하고 싶어요",
+          "meaning_zh": "我想更换这件商品"
+        }
+      ]
+    },
+    "ko.making-plans": {
+      "keywords": [
+        {
+          "surface": "오후",
+          "meaning_zh": "下午"
+        },
+        {
+          "surface": "토요일",
+          "meaning_zh": "星期六"
+        },
+        {
+          "surface": "영화관",
+          "meaning_zh": "电影院"
+        },
+        {
+          "surface": "식당",
+          "meaning_zh": "餐馆"
+        },
+        {
+          "surface": "장소",
+          "meaning_zh": "地点"
+        },
+        {
+          "surface": "연락",
+          "meaning_zh": "联系"
+        }
+      ],
+      "phrases": [
+        {
+          "surface": "이번 주말",
+          "meaning_zh": "这个周末"
+        },
+        {
+          "surface": "여섯 시에",
+          "meaning_zh": "六点钟"
+        },
+        {
+          "surface": "～ 앞에서",
+          "meaning_zh": "在……前面"
+        },
+        {
+          "surface": "좋은 생각이에요",
+          "meaning_zh": "好主意"
+        },
+        {
+          "surface": "미안하지만 못 가요",
+          "meaning_zh": "抱歉，我去不了"
+        },
+        {
+          "surface": "다른 날",
+          "meaning_zh": "改天"
+        }
+      ]
+    }
+  }
+}

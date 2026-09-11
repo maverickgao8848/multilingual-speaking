@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "languages": [
+    "es",
+    "fr",
+    "de",
+    "ja",
+    "ko"
+  ],
+  "statuses": {
+    "audited_ready": {
+      "label_zh": "已备课",
+      "description_zh": "Skill 内已有带来源的 A1 课程包，可直接生成预习卡。"
+    },
+    "on_demand": {
+      "label_zh": "需现场准备",
+      "description_zh": "Skill 内尚无审计课程包；如选择，须明确标为当次原创练习，不得冒充来源课程。"
+    }
+  },
+  "topics": [
+    {
+      "id": "cafe-order",
+      "label_zh": "咖啡店点单",
+      "status": "audited_ready",
+      "material_scene": "cafe-order"
+    },
+    {
+      "id": "directions-transit",
+      "label_zh": "问路与公共交通",
+      "status": "audited_ready",
+      "material_scene": "directions-transit"
+    },
+    {
+      "id": "doctor-visit",
+      "label_zh": "就医与说明症状",
+      "status": "audited_ready",
+      "material_scene": "doctor-visit"
+    },
+    {
+      "id": "introductions",
+      "label_zh": "问候与自我介绍",
+      "status": "audited_ready",
+      "material_scene": "introductions"
+    },
+    {
+      "id": "shopping",
+      "label_zh": "购物与选择商品",
+      "status": "audited_ready",
+      "material_scene": "shopping"
+    },
+    {
+      "id": "making-plans",
+      "label_zh": "邀请与约时间",
+      "status": "audited_ready",
+      "material_scene": "making-plans"
+    },
+    {
+      "id": "restaurant-dining",
+      "label_zh": "餐厅用餐与结账",
+      "status": "on_demand"
+    },
+    {
+      "id": "hotel-check-in",
+      "label_zh": "酒店入住与退房",
+      "status": "on_demand"
+    },
+    {
+      "id": "airport-check-in",
+      "label_zh": "机场值机与托运行李",
+      "status": "on_demand"
+    },
+    {
+      "id": "immigration-customs",
+      "label_zh": "入境与海关问答",
+      "status": "on_demand"
+    },
+    {
+      "id": "train-tickets",
+      "label_zh": "购买火车票与确认站台",
+      "status": "on_demand"
+    },
+    {
+      "id": "taxi-ride",
+      "label_zh": "打车与说明目的地",
+      "status": "on_demand"
+    },
+    {
+      "id": "emergency-help",
+      "label_zh": "紧急求助与报警",
+      "status": "on_demand"
+    },
+    {
+      "id": "pharmacy",
+      "label_zh": "药店咨询与买药",
+      "status": "on_demand"
+    },
+    {
+      "id": "haircut",
+      "label_zh": "理发与描述发型",
+      "status": "on_demand"
+    },
+    {
+      "id": "bank-atm",
+      "label_zh": "银行与自动取款机",
+      "status": "on_demand"
+    },
+    {
+      "id": "phone-sim",
+      "label_zh": "购买手机卡与流量套餐",
+      "status": "on_demand"
+    },
+    {
+      "id": "post-office",
+      "label_zh": "邮局寄件与填写地址",
+      "status": "on_demand"
+    },
+    {
+      "id": "renting-home",
+      "label_zh": "租房与咨询居住条件",
+      "status": "on_demand"
+    },
+    {
+      "id": "workplace-small-talk",
+      "label_zh": "职场寒暄与简单协作",
+      "status": "on_demand"
+    },
+    {
+      "id": "classroom",
+      "label_zh": "课堂交流与请求帮助",
+      "status": "on_demand"
+    },
+    {
+      "id": "weather",
+      "label_zh": "谈论天气与穿衣建议",
+      "status": "on_demand"
+    },
+    {
+      "id": "hobbies",
+      "label_zh": "兴趣爱好与休闲活动",
+      "status": "on_demand"
+    },
+    {
+      "id": "family",
+      "label_zh": "介绍家人与家庭生活",
+      "status": "on_demand"
+    },
+    {
+      "id": "daily-routine",
+      "label_zh": "日常作息与时间安排",
+      "status": "on_demand"
+    },
+    {
+      "id": "sightseeing",
+      "label_zh": "景点游览与拍照请求",
+      "status": "on_demand"
+    }
+  ]
+}

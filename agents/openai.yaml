@@ -1,0 +1,6 @@
+interface:
+  display_name: "多语种口语练习"
+  short_description: "西法德日韩 26 主题口语练习、可追溯课程与现场备课区分"
+  default_prompt: "Use $multilingual-speaking to start a 10-minute guided Spanish café-ordering practice."
+policy:
+  allow_implicit_invocation: true

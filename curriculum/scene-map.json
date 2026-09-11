@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "scenes": [
+    {
+      "id": "cafe-order",
+      "label_zh": "咖啡店点单",
+      "communication_tasks": [
+        "点单",
+        "确认冷热与杯型",
+        "修改订单",
+        "付款"
+      ],
+      "mappings": {
+        "es": [
+          {
+            "source_id": "es-spanish-proficiency-exercises",
+            "unit": "Intermediate, Task 06: Order a simple meal",
+            "status": "verified"
+          }
+        ],
+        "fr": [
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 5: Bon appétit — au café",
+            "status": "verified"
+          }
+        ],
+        "de": [
+          {
+            "source_id": "de-deutsch-im-blick",
+            "unit": "Kapitel 3: Der Alltag und das Studentenleben — Sprache im Kontext: Eis; Andrew/Austin: Döner kaufen",
+            "status": "verified"
+          }
+        ],
+        "ja": [
+          {
+            "source_id": "ja-mhcc-japanese-oer",
+            "unit": "Second-Year Japanese, Lesson 48: レストランで",
+            "status": "verified"
+          }
+        ],
+        "ko": [
+          {
+            "source_id": "ko-fsi-korean",
+            "unit": "Korean Basic Course, Volume 1, Unit 12: Eating and Drinking — restaurant-ordering dialogue",
+            "status": "partial_verified",
+            "coverage": [
+              "点餐与饮品请求"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "directions-transit",
+      "label_zh": "问路与公共交通",
+      "communication_tasks": [
+        "说明目的地",
+        "询问路线",
+        "确认换乘",
+        "处理走错或延误"
+      ],
+      "mappings": {
+        "es": [
+          {
+            "source_id": "es-spanish-proficiency-exercises",
+            "unit": "Intermediate, Task 08: Ask and give directions",
+            "status": "verified"
+          }
+        ],
+        "fr": [
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 6: La ville — getting your bearings",
+            "status": "verified"
+          },
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 3: Les vacances en France — les transports / à la gare",
+            "status": "verified"
+          }
+        ],
+        "de": [
+          {
+            "source_id": "de-deutsch-im-blick",
+            "unit": "Kapitel 10: Auf nach Berlin! — Nach dem Weg fragen",
+            "status": "verified"
+          }
+        ],
+        "ja": [
+          {
+            "source_id": "ja-mhcc-japanese-oer",
+            "unit": "Second-Year Japanese, Lessons 55–56: こうつうきかん / 道あんない",
+            "status": "verified"
+          }
+        ],
+        "ko": [
+          {
+            "source_id": "ko-fsi-korean",
+            "unit": "Korean Basic Course, Volume 1, Unit 3: Finding One's Way Around (Continued)",
+            "status": "partial_verified",
+            "coverage": [
+              "基本问路与路线说明"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "doctor-visit",
+      "label_zh": "就医与说明症状",
+      "communication_tasks": [
+        "描述症状",
+        "说明持续时间",
+        "回答病史问题",
+        "确认用药与下一步"
+      ],
+      "mappings": {
+        "es": [
+          {
+            "source_id": "es-spanish-proficiency-exercises",
+            "unit": "Intermediate, Task 21: Describe a physical ailment to a doctor",
+            "status": "verified"
+          }
+        ],
+        "fr": [
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 10: Mode, forme et santé — la forme et la santé / le corps",
+            "status": "verified"
+          }
+        ],
+        "de": [
+          {
+            "source_id": "de-deutsch-im-blick",
+            "unit": "Kapitel 7: Gesundheit & Fitness — Beim Arzt",
+            "status": "verified"
+          }
+        ],
+        "ja": [
+          {
+            "source_id": "ja-mhcc-japanese-oer",
+            "unit": "First-Year Japanese III, Lesson 45: びょうきとけんこう",
+            "status": "verified"
+          }
+        ],
+        "ko": [
+          {
+            "source_id": "ko-fsi-korean",
+            "unit": "Korean Basic Course, Volume 2, Units 32–33: Visiting the Patient at the Hospital",
+            "status": "partial_verified",
+            "coverage": [
+              "疾病与医院语境词汇"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "introductions",
+      "label_zh": "问候与自我介绍",
+      "communication_tasks": [
+        "问候破冰",
+        "交换姓名与来源",
+        "说明学习或职业身份",
+        "介绍他人并结束交谈"
+      ],
+      "mappings": {
+        "de": [
+          {
+            "source_id": "de-deutsch-im-blick",
+            "unit": "Kapitel 1: Willkommen in Würzburg! — Begrüßungen; Persönliche Informationen; Jemanden kennenlernen; Interviews: Wer bin ich?",
+            "status": "verified",
+            "coverage": [
+              "问候",
+              "交换姓名与个人信息",
+              "说明来源、居住地与学习或职业",
+              "区分 du 与 Sie"
+            ]
+          }
+        ],
+        "ja": [
+          {
+            "source_id": "ja-mhcc-japanese-oer",
+            "unit": "First-Year Japanese I, Lessons 6 and 8: Self introduction / Name and exchange",
+            "status": "verified",
+            "coverage": [
+              "初次见面问候",
+              "介绍姓名与出身",
+              "交换个人信息",
+              "礼貌结束自我介绍"
+            ]
+          }
+        ],
+        "es": [
+          {
+            "source_id": "es-spanish-proficiency-exercises",
+            "unit": "Beginning, Task 08: Introduce yourself and a friend to others",
+            "status": "verified",
+            "coverage": [
+              "问候与自我介绍",
+              "介绍第三人",
+              "交换姓名"
+            ]
+          },
+          {
+            "source_id": "es-spanish-proficiency-exercises",
+            "unit": "Intermediate, Tasks 01, 12 and 15: Make a social introduction; Talk about yourself; Tell where you are from",
+            "status": "verified",
+            "coverage": [
+              "合宜的社交介绍",
+              "说明职业或学习身份",
+              "说明来自哪里"
+            ]
+          }
+        ],
+        "fr": [
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 01: Bonjour! — salutations (005); présentations (006)",
+            "status": "verified",
+            "coverage": [
+              "问候与道别",
+              "tu / vous 自我介绍",
+              "介绍第三人"
+            ]
+          },
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 02: Me voici! — fiche d'identité (011); questions personnelles (012)",
+            "status": "verified",
+            "coverage": [
+              "交换姓名与来源",
+              "说明居住地",
+              "说明职业或学习身份"
+            ]
+          }
+        ],
+        "ko": [
+          {
+            "source_id": "ko-fsi-korean",
+            "unit": "Korean Basic Course, Volume 1, Unit 1: Greetings",
+            "status": "verified",
+            "coverage": [
+              "问候",
+              "姓名",
+              "国籍与来处",
+              "初次见面基本信息"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "shopping",
+      "label_zh": "购物与选择商品",
+      "communication_tasks": [
+        "说明想找的商品",
+        "询问库存、尺寸或数量",
+        "比较或试用",
+        "决定购买并付款"
+      ],
+      "mappings": {
+        "de": [
+          {
+            "source_id": "de-deutsch-im-blick",
+            "unit": "Kapitel 4: Freizeit und Ausgehen — Interviews: Kleidung kaufen; Vokabular: Kleidung kaufen / tragen",
+            "status": "verified",
+            "coverage": [
+              "寻找衣物",
+              "询问尺寸与试穿",
+              "评价是否合身",
+              "询价与付款"
+            ]
+          }
+        ],
+        "ja": [
+          {
+            "source_id": "ja-mhcc-japanese-oer",
+            "unit": "Second-Year Japanese I, Lesson 52: 日本の店 — 呉服屋と文房具屋 / ～に行く",
+            "status": "partial_verified",
+            "coverage": [
+              "商店与商品词汇",
+              "说明购物目的",
+              "日本商店文化"
+            ],
+            "gap": "教材覆盖商店、购物和衣物语境，但不直接覆盖完整的顾客—店员询价、试穿、换尺码与付款流程；交易句型为原创改写。"
+          }
+        ],
+        "es": [
+          {
+            "source_id": "es-spanish-proficiency-exercises",
+            "unit": "Intermediate, Tasks 09, 16 and 17: Buy an item of clothing; Ask the price of an item; Ask if an item exists in a store",
+            "status": "verified",
+            "coverage": [
+              "寻找衣物",
+              "询问尺码或库存",
+              "询价与购买"
+            ]
+          },
+          {
+            "source_id": "es-trayectos",
+            "unit": "Volume 2, Módulo 2: Mi estilo de vida — Más comunicación: La ropa",
+            "status": "verified",
+            "coverage": [
+              "衣物与材质词汇",
+              "使用 comprar / costar",
+              "商店购物角色任务"
+            ]
+          }
+        ],
+        "fr": [
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 05: Bon appétit! — au marché, au supermarché (037); à l'épicerie (041); expressions de quantité (046); verbes: faire le marché, choisir, prendre (048)",
+            "status": "partial_verified",
+            "coverage": [
+              "识别并选择食品或日用品",
+              "询问或说明商品是否有货",
+              "说明所需数量",
+              "确认选择"
+            ]
+          }
+        ],
+        "ko": [
+          {
+            "source_id": "ko-fsi-korean",
+            "unit": "Korean Basic Course, Volume 1, Units 4–5: Shopping / Shopping (Continued)",
+            "status": "verified",
+            "coverage": [
+              "询价",
+              "数量与量词",
+              "选择商品",
+              "基本购买交互"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "making-plans",
+      "label_zh": "邀请与约时间",
+      "communication_tasks": [
+        "询问是否有空",
+        "提出活动",
+        "协商时间地点",
+        "接受、婉拒或改期并确认"
+      ],
+      "mappings": {
+        "de": [
+          {
+            "source_id": "de-deutsch-im-blick",
+            "unit": "Kapitel 4: Freizeit und Ausgehen — Verschiedene Freizeitaktivitäten; Wohin man gehen kann; Ins Kino gehen; Wo man essen gehen kann",
+            "status": "verified",
+            "coverage": [
+              "询问是否有空",
+              "提出活动邀请",
+              "商定日期、时间和地点",
+              "接受、婉拒与提出替代时间"
+            ]
+          }
+        ],
+        "ja": [
+          {
+            "source_id": "ja-mhcc-japanese-oer",
+            "unit": "First-Year Japanese I–II, Lessons 23 and 26: Shall we? / ～ませんか",
+            "status": "verified",
+            "coverage": [
+              "询问是否有空",
+              "使用 ～ませんか 发出邀请",
+              "商定时间地点",
+              "接受或婉拒并提出替代时间"
+            ]
+          }
+        ],
+        "es": [
+          {
+            "source_id": "es-trayectos",
+            "unit": "Volume 2, Módulo 1: Mi vida diaria — Hablemos más: Los pasatiempos y las actividades",
+            "status": "verified",
+            "coverage": [
+              "谈论业余活动",
+              "邀请一起活动",
+              "商定时间与地点"
+            ]
+          },
+          {
+            "source_id": "es-trayectos",
+            "unit": "Volume 2, Módulo 1: Mi vida diaria — Hablemos de gramática: Estructura 1 — Actividades en el futuro: ir a + infinitive",
+            "status": "verified",
+            "coverage": [
+              "表达近期计划",
+              "接受邀请",
+              "礼貌婉拒"
+            ]
+          }
+        ],
+        "fr": [
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 02: Me voici! — l'heure / l'heure officielle (016–017); passe-temps et activités (018)",
+            "status": "partial_verified",
+            "coverage": [
+              "表达活动偏好",
+              "提出可进行的活动",
+              "询问并说明时间"
+            ]
+          },
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 03: Les vacances en France — les activités (026); interviews: le week-end prochain; grammaire: aller + infinitif / futur proche",
+            "status": "partial_verified",
+            "coverage": [
+              "谈论周末活动",
+              "表达近期计划",
+              "提出日期或活动方案"
+            ]
+          },
+          {
+            "source_id": "fr-francais-interactif",
+            "unit": "Chapitre 07: Les fêtes — rites et coutumes (058); verbes: inviter (059)",
+            "status": "partial_verified",
+            "coverage": [
+              "聚会与庆祝语境",
+              "邀请动作"
+            ]
+          }
+        ],
+        "ko": [
+          {
+            "source_id": "ko-fsi-korean",
+            "unit": "Korean Basic Course, Volume 1, Units 6–7: Time; Units 16–17: Telephoning; Unit 18: Talking About Weather — -(으)ㄹ 계획이다; Volume 2, Unit 29: Going Out for a Drive",
+            "status": "partial_verified",
+            "coverage": [
+              "日期与时间",
+              "电话联系",
+              "表达计划",
+              "提议一起外出与接受"
+            ],
+            "coverage_gaps": [
+              "现代 해요体的委婉拒绝",
+              "完整改期流程"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

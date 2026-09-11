@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# Local learner data
+multilingual-speaking-workbench/
+workbench-data.json
+sessions/
+session-*.json
+test-workbench/
